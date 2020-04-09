@@ -1,3 +1,6 @@
 FROM docker.io/centos:7
 
-USER 1000
+RUN useradd test
+RUN usermod -a -G apache test
+
+USER test
